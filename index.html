@@ -6,67 +6,91 @@
     <title>Sriniwas Sharan Upadhyay | Lead Systems Engineer</title>
     <style>
         :root {
-            --primary: #0F172A;
+            --primary: #1E3A8A;
             --secondary: #2563EB;
-            --accent: #38BDF8;
-            --bg: #0B0F19;
-            --card-bg: #1E293B;
-            --text: #F1F5F9;
-            --text-muted: #94A3B8;
-            --border: #334155;
+            --accent: #0284C7;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
         }
+        html { scroll-behavior: smooth; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
-        .container { max-width: 1000px; margin: 0 auto; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 40px; }
+        
+        /* Navigation Bar */
+        .navbar { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 15px 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; flex-wrap: wrap; gap: 10px; }
+        .nav-brand { font-weight: 700; color: var(--primary); font-size: 16px; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        .container { max-width: 1000px; margin: 25px auto 0 auto; padding: 0 20px; }
         
         /* Hero Banner */
-        .hero { background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px solid var(--border); padding: 50px 30px; border-radius: 16px; text-align: center; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .hero h1 { color: var(--text); font-size: 32px; margin-bottom: 10px; font-weight: 800; letter-spacing: -0.5px; }
-        .hero h2 { color: var(--accent); font-size: 18px; font-weight: 600; margin-bottom: 20px; }
-        .hero p { color: var(--text-muted); font-size: 15px; max-width: 800px; margin: 0 auto 25px auto; }
-        .contact-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .badge { background: rgba(37, 99, 235, 0.15); color: var(--accent); padding: 8px 16px; border-radius: 20px; font-size: 14px; text-decoration: none; border: 1px solid rgba(56, 189, 248, 0.3); transition: background 0.2s; }
-        .badge:hover { background: rgba(37, 99, 235, 0.3); }
+        .hero { background: var(--card-bg); border: 1px solid var(--border); padding: 45px 30px; border-radius: 12px; text-align: center; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .hero h1 { color: var(--primary); font-size: 30px; margin-bottom: 8px; font-weight: 800; }
+        .hero h2 { color: var(--secondary); font-size: 16px; font-weight: 600; margin-bottom: 15px; }
+        .hero p { color: var(--text-muted); font-size: 14px; max-width: 800px; margin: 0 auto 20px auto; }
+        .contact-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .badge { background: #EFF6FF; color: var(--secondary); padding: 6px 14px; border-radius: 20px; font-size: 13px; text-decoration: none; border: 1px solid #BFDBFE; font-weight: 500; transition: background 0.2s; }
+        .badge:hover { background: #DBEAFE; }
 
         /* Sections */
-        section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h3 { color: var(--accent); font-size: 18px; border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        h3 { color: var(--primary); font-size: 18px; border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
 
         /* Grids */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .skill-card { background: rgba(15, 23, 42, 0.6); padding: 20px; border-radius: 8px; border-left: 4px solid var(--secondary); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .skill-card h4 { font-size: 15px; color: var(--text); margin-bottom: 8px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; }
+        .skill-card { background: var(--bg); padding: 18px; border-radius: 8px; border-left: 4px solid var(--secondary); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .skill-card h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; font-weight: 700; }
         .skill-card p { font-size: 13px; color: var(--text-muted); margin: 0; }
 
         /* Experience & Projects */
         .item-block { margin-bottom: 25px; }
         .item-block:last-child { margin-bottom: 0; }
-        .item-title { font-weight: bold; color: var(--text); font-size: 17px; }
-        .item-subtitle { font-size: 14px; color: var(--accent); font-style: italic; margin-bottom: 10px; }
+        .item-title { font-weight: 700; color: var(--primary); font-size: 16px; }
+        .item-subtitle { font-size: 13px; color: var(--secondary); font-style: italic; margin-bottom: 8px; }
         ul { padding-left: 20px; font-size: 14px; color: var(--text-muted); }
-        li { margin-bottom: 8px; }
+        li { margin-bottom: 6px; }
         strong { color: var(--text); }
 
         /* Footer */
-        footer { text-align: center; font-size: 13px; color: var(--text-muted); padding: 20px 0; margin-top: 20px; border-top: 1px solid var(--border); }
+        footer { text-align: center; font-size: 13px; color: var(--text-muted); padding: 20px 0; margin-top: 30px; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
 
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-brand">Sriniwas Sharan Upadhyay</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education & Honors</a>
+            </div>
+        </div>
+    </nav>
+
 <div class="container">
-    <header class="hero">
+    <header class="hero" id="about">
         <h1>Sriniwas Sharan Upadhyay</h1>
         <h2>Lead Engineer / Project Leader | C/C++ Telecom & Systems Engineering</h2>
         <p>Lead / Senior C/C++ Systems Engineer with 15+ years of experience designing, developing, and optimizing high-performance software across Telecom Core Networks, Enterprise Middleware, and Distributed Systems.</p>
         <div class="contact-badges">
-            <a class="badge" href="mailto:upadhyaysri143@gmail.com">📧 upadhyaysri143@gmail.com</a>
-            <a class="badge" href="tel:+918860093148">📱 +91-8860093148</a>
-            <a class="badge" href="https://www.linkedin.com/in/sriniwas-sharan-upadhyay-1099ba67" target="_blank">🔗 LinkedIn Profile</a>
+            <a class="badge" href="mailto:upadhyaysri143@gmail.com">📧 Email Me</a>
+            <a class="badge" href="tel:+918860093148">📱 Call Me</a>
+            <a class="badge" href="https://www.linkedin.com/in/sriniwas-sharan-upadhyay-1099ba67" target="_blank">🔗 LinkedIn</a>
             <span class="badge">📍 Greater Noida West, UP</span>
         </div>
     </header>
 
-    <section>
+    <section id="skills">
         <h3>Core Technical Skills</h3>
         <div class="skills-grid">
             <div class="skill-card">
@@ -88,7 +112,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="projects">
         <h3>Key Architecture & Engineering Projects</h3>
         
         <div class="item-block">
@@ -109,7 +133,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="experience">
         <h3>Professional Experience</h3>
         
         <div class="item-block">
@@ -123,7 +147,7 @@
             </ul>
         </div>
 
-        <div class="item-block" style="margin-top: 20px;">
+        <div class="item-block" style="margin-top: 25px;">
             <div class="item-title">IBM India Pvt. Ltd. — Noida, India</div>
             <div class="item-subtitle">System Engineer / Application Developer (Aug 2011 – Sept 2015)</div>
             <ul>
@@ -133,12 +157,15 @@
         </div>
     </section>
 
-    <section>
+    <section id="education">
         <h3>Education & Honors</h3>
-        <ul>
+        <ul style="margin-bottom: 15px;">
             <li><strong>M.Tech, Digital Communication</strong> — National Institute of Technology (NIT), Bhopal — CGPA 8.5 (2011)</li>
             <li><strong>GATE 2009</strong> — 96.1 Percentile, Electronics & Communication Engineering</li>
-            <li><strong>IBM Orion Award for Eminence & Excellence</strong> — Two-time recipient (2012, 2014) for technical delivery</li>
+        </ul>
+        <h3 style="margin-top: 25px;">Key Recognitions</h3>
+        <ul>
+            <li><strong>IBM Orion Award for Eminence & Excellence</strong> — Two-time recipient (2012, 2014) for technical delivery and mission-critical telecom contributions.</li>
         </ul>
     </section>
 
