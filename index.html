@@ -3,176 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sriniwas Sharan Upadhyay | Lead Systems Engineer</title>
+    <title>Sriniwas Sharan Upadhyay | Lead Software Engineer</title>
     <style>
         :root {
-            --primary: #1E3A8A;
-            --secondary: #2563EB;
-            --accent: #0284C7;
-            --bg: #F8FAFC;
-            --card-bg: #FFFFFF;
-            --text: #1E293B;
-            --text-muted: #64748B;
-            --border: #E2E8F0;
+            --primary: #003366;
+            --text: #222222;
+            --bg: #f9f9fb;
+            --card-bg: #ffffff;
+            --accent: #0044cc;
+            --gray: #555555;
         }
-        html { scroll-behavior: smooth; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 40px; }
-        
-        /* Navigation Bar */
-        .navbar { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 15px 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
-        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; flex-wrap: wrap; gap: 10px; }
-        .nav-brand { font-weight: 700; color: var(--primary); font-size: 16px; }
-        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--secondary); }
-
-        .container { max-width: 1000px; margin: 25px auto 0 auto; padding: 0 20px; }
-        
-        /* Hero Banner */
-        .hero { background: var(--card-bg); border: 1px solid var(--border); padding: 45px 30px; border-radius: 12px; text-align: center; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        .hero h1 { color: var(--primary); font-size: 30px; margin-bottom: 8px; font-weight: 800; }
-        .hero h2 { color: var(--secondary); font-size: 16px; font-weight: 600; margin-bottom: 15px; }
-        .hero p { color: var(--text-muted); font-size: 14px; max-width: 800px; margin: 0 auto 20px auto; }
-        .contact-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .badge { background: #EFF6FF; color: var(--secondary); padding: 6px 14px; border-radius: 20px; font-size: 13px; text-decoration: none; border: 1px solid #BFDBFE; font-weight: 500; transition: background 0.2s; }
-        .badge:hover { background: #DBEAFE; }
-
-        /* Sections */
-        section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        h3 { color: var(--primary); font-size: 18px; border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-
-        /* Grids */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; }
-        .skill-card { background: var(--bg); padding: 18px; border-radius: 8px; border-left: 4px solid var(--secondary); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .skill-card h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; font-weight: 700; }
-        .skill-card p { font-size: 13px; color: var(--text-muted); margin: 0; }
-
-        /* Experience & Projects */
-        .item-block { margin-bottom: 25px; }
-        .item-block:last-child { margin-bottom: 0; }
-        .item-title { font-weight: 700; color: var(--primary); font-size: 16px; }
-        .item-subtitle { font-size: 13px; color: var(--secondary); font-style: italic; margin-bottom: 8px; }
-        ul { padding-left: 20px; font-size: 14px; color: var(--text-muted); }
-        li { margin-bottom: 6px; }
-        strong { color: var(--text); }
-
-        /* Footer */
-        footer { text-align: center; font-size: 13px; color: var(--text-muted); padding: 20px 0; margin-top: 30px; border-top: 1px solid var(--border); }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid #eaeaea;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+        h1 {
+            color: var(--primary);
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+        }
+        .headline {
+            font-size: 1.1rem;
+            color: var(--gray);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.3rem;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.6rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .skill-category {
+            background: #f4f6f9;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        .skill-category h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+            color: var(--primary);
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="nav-brand">Sriniwas Sharan Upadhyay</span>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education & Honors</a>
-            </div>
-        </div>
-    </nav>
-
-<div class="container">
-    <header class="hero" id="about">
+    <header>
         <h1>Sriniwas Sharan Upadhyay</h1>
-        <h2>Lead Engineer / Project Leader | C/C++ Telecom & Systems Engineering</h2>
-        <p>Lead / Senior C/C++ Systems Engineer with 15+ years of experience designing, developing, and optimizing high-performance software across Telecom Core Networks, Enterprise Middleware, and Distributed Systems.</p>
-        <div class="contact-badges">
-            <a class="badge" href="mailto:upadhyaysri143@gmail.com">📧 Email Me</a>
-            <a class="badge" href="tel:+918860093148">📱 Call Me</a>
-            <a class="badge" href="https://www.linkedin.com/in/sriniwas-sharan-upadhyay-1099ba67" target="_blank">🔗 LinkedIn</a>
-            <span class="badge">📍 Greater Noida West, UP</span>
+        <div class="headline">Lead Software Engineer | C/C++ Systems Engineering | Distributed & Cloud-Native Systems</div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/sriniwas-sharan-upadhyay-1099ba67" target="_blank">LinkedIn</a> |
+            <a href="https://sriniwas2020.github.io/portfolio/">Portfolio</a> |
+            <a href="mailto:upadhyaysri143@gmail.com">Email</a>
         </div>
     </header>
 
-    <section id="skills">
-        <h3>Core Technical Skills</h3>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h4>Languages & Systems</h4>
-                <p>C, C++, Modern C++, STL, Multithreading, Concurrency, Memory Management, Data Structures & Algorithms, Socket Programming, TCP/IP, GDB, Valgrind</p>
-            </div>
-            <div class="skill-card">
-                <h4>Telecom & Protocols</h4>
-                <p>5G USDP Proxy, ADW Applications, 3GPP Nudr, PLF, BSF, DQI, HTTP, REST, GZIP/Base64, Diameter, LDAP, Oracle Tuxedo ATMI</p>
-            </div>
-            <div class="skill-card">
-                <h4>Cloud & Infrastructure</h4>
-                <p>Docker, Kubernetes, Helm, Nokia Container Services (NCS), VNF-to-CNF Migration, CI/CD, Jenkins, Git, Linux/Unix Shell Scripting</p>
-            </div>
-            <div class="skill-card">
-                <h4>Data & Middleware</h4>
-                <p>LMDB, LDAP DB, OpenSearch, Oracle, SQL, PL/SQL, Sybase, Pro*C, Oracle Tuxedo ATMI</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Lead C/C++ Systems Engineer with <strong>15+ years of experience</strong> building, debugging, and optimizing production software across telecom applications, distributed systems, enterprise middleware, and embedded platforms. Strong background in C/C++, Linux/Unix, concurrency, memory management, system-level debugging, and performance engineering. Hands-on experience with Docker, Kubernetes, Helm, Jenkins, CI/CD, and cloud-native application migration. M.Tech in Digital Communication from NIT Bhopal (CGPA 8.5), GATE 2009 (96.1 percentile).</p>
+        </section>
 
-    <section id="projects">
-        <h3>Key Architecture & Engineering Projects</h3>
-        
-        <div class="item-block">
-            <div class="item-title">MPRS (Multi-Tenant Parallel Regression System)</div>
-            <div class="item-subtitle">Cloud-Native Orchestration Framework</div>
+        <section>
+            <h2>Key Engineering Highlights</h2>
             <ul>
-                <li>Designed the architecture and led implementation of MPRS, a cloud-native test framework utilizing two-tier pod/thread isolation, adaptive work-stealing scheduling, and asynchronous telemetry streaming.</li>
-                <li>Engineered dynamic quarantine and self-healing reclamation mechanisms, reducing an 849-test suite from 210 minutes to 36 minutes — an 82.7% wall-clock reduction and 5.78x speedup.</li>
+                <li><strong>MPRS-ARTS Performance Engineering:</strong> Designed and led the implementation of MPRS-ARTS (Multi-Lane Parallel Regression System for USDP), a cloud-native test framework leveraging two-tier pod/thread isolation and adaptive work-stealing scheduling.</li>
+                <li><strong>Dramatic Regression Acceleration:</strong> Engineered dynamic quarantine and self-healing reclamation mechanisms, slashing end-to-end ARTS USDP regression execution time from <strong>~16 hours down to ~3 hours</strong>.</li>
+                <li><strong>In-Memory Data Structures:</strong> Designed efficient low-latency C data structures (custom hash tables, m-array trees, and dynamic linked lists) using pre-pooled memory and LMDB-backed caching.</li>
+                <li><strong>Cloud-Native Migration:</strong> Spearheaded the transition of legacy telecom application modules and test harnesses from VNFs to Kubernetes CNFs using Nokia Container Services (NCS).</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="item-block" style="margin-top: 20px;">
-            <div class="item-title">Graph Data Digitization Pipeline</div>
-            <div class="item-subtitle">AI & Computer Vision Integration</div>
+        <section>
+            <h2>Technical Toolkit</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages & Systems</h3>
+                    <p>C, C++, Modern C++, STL, Multithreading, Concurrency, Memory Management, Socket Programming, Linux/Unix, GDB, Valgrind</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Distributed & Performance</h3>
+                    <p>Distributed Systems, Parallel Execution, Work-Stealing, Performance Optimization, Root-Cause Analysis, Production Troubleshooting</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <p>Docker, Kubernetes, Helm, Nokia Container Services (NCS), Jenkins, CI/CD, Shell Scripting, VNF-to-CNF Migration</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Telecom & Protocols</h3>
+                    <p>USDP, 3GPP Nudr, PLF, BSF, DQI, HTTP, REST, Diameter, LDAP, Oracle Tuxedo ATMI</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
             <ul>
-                <li>Developed OpenSearch graph extraction and parsing algorithms with Cursor AI to convert complex visual analytics charts into structured, queryable data.</li>
+                <li><strong>R Systems International Pvt. Ltd.</strong> (2018 – Present) — Lead Engineer / Project Leader / Senior Software Engineer</li>
+                <li><strong>Aristocrat Technologies India Pvt. Ltd.</strong> (2017 – 2018) — Senior Software Engineer-I</li>
+                <li><strong>CenturyLink Technologies India Pvt. Ltd.</strong> (2015 – 2017) — Software Developer</li>
+                <li><strong>IBM India Pvt. Ltd.</strong> (2011 – 2015) — System Engineer / Application Developer</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section id="experience">
-        <h3>Professional Experience</h3>
-        
-        <div class="item-block">
-            <div class="item-title">R Systems International Pvt. Ltd. — Greater Noida, India</div>
-            <div class="item-subtitle">Lead Engineer (Oct 2025 – Present) | Project Leader (Oct 2021 – Oct 2025) | Senior Software Engineer (Mar 2018 – Oct 2021)</div>
+        <section>
+            <h2>Education & Credentials</h2>
             <ul>
-                <li><strong>5G Core Network & Proxy Engineering:</strong> Contributed to C/C++ proxy modules for 4G/5G USDP integration supporting 3GPP Nudr interfaces and REST GZIP/Base64 processing pipelines.</li>
-                <li><strong>Routing Modules & Production Ownership:</strong> Contributed features across PLF, including HTTP PCRF health checks, BSF, and DQI routing modules, with production on-call support.</li>
-                <li><strong>In-Memory Data Structures:</strong> Designed efficient C data structures including custom hash tables, m-array trees, and dynamic linked lists using pre-pooled memory and LMDB-backed caching.</li>
-                <li><strong>VNF-to-CNF Migration:</strong> Led migration of core application modules and test frameworks from legacy VNFs to Kubernetes CNFs using Nokia Container Services (NCS).</li>
+                <li><strong>M.Tech in Digital Communication</strong> — National Institute of Technology (NIT), Bhopal (CGPA: 8.5)</li>
+                <li><strong>B.E. in Electronics & Communication</strong> — Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV) (69.6%)</li>
+                <li><strong>GATE 2009</strong> — 96.1 Percentile (Electronics & Communication Engineering)</li>
             </ul>
-        </div>
-
-        <div class="item-block" style="margin-top: 25px;">
-            <div class="item-title">IBM India Pvt. Ltd. — Noida, India</div>
-            <div class="item-subtitle">System Engineer / Application Developer (Aug 2011 – Sept 2015)</div>
-            <ul>
-                <li>Maintained OLTP prepaid billing and recharge engines (SIRA, Mortirolo, VOM) on Oracle Tuxedo ATMI, serving 4.2M subscribers using C, C++, SQL, Pro*C, and Shell Scripting.</li>
-                <li>Implemented Diameter protocol handlers in SIRA core and created Tuxedo processes supporting OCS charging and cancellation operations.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="education">
-        <h3>Education & Honors</h3>
-        <ul style="margin-bottom: 15px;">
-            <li><strong>M.Tech, Digital Communication</strong> — National Institute of Technology (NIT), Bhopal — CGPA 8.5 (2011)</li>
-            <li><strong>GATE 2009</strong> — 96.1 Percentile, Electronics & Communication Engineering</li>
-        </ul>
-        <h3 style="margin-top: 25px;">Key Recognitions</h3>
-        <ul>
-            <li><strong>IBM Orion Award for Eminence & Excellence</strong> — Two-time recipient (2012, 2014) for technical delivery and mission-critical telecom contributions.</li>
-        </ul>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2026 Sriniwas Sharan Upadhyay. Designed for High-Performance Systems & Engineering Leadership.
-    </footer>
-</div>
-
-</body>
+        <p>&copy; 2026 Sriniwas Sharan Upadhyay. All rights reserved.</p>
+    </body>
 </html>
